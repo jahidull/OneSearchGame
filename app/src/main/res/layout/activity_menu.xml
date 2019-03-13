@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chrisjluc.onesearch.ui.MenuActivity">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/top_bar"
+        android:background="@color/blue"></FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <chrisjluc.onesearch.ui.components.GameBoldTextView
+                android:textSize="48sp"
+                android:text="ONE"
+                android:textColor="@color/green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <chrisjluc.onesearch.ui.components.GameBoldTextView
+                android:textSize="48sp"
+                android:text="SEARCH"
+                android:textColor="@color/blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/title_layout"
+            android:layout_marginTop="16dp"
+            android:id="@+id/button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true">
+
+
+            <chrisjluc.onesearch.ui.components.GameButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/element_margin_separation"
+                android:text="@string/menu_easy"
+                android:id="@+id/bMenuEasy" />
+
+            <chrisjluc.onesearch.ui.components.GameButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/element_margin_separation"
+                android:text="@string/menu_medium"
+                android:id="@+id/bMenuMedium" />
+
+            <chrisjluc.onesearch.ui.components.GameButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/element_margin_separation"
+                android:text="@string/menu_hard"
+                android:id="@+id/bMenuHard" />
+<!--
+            <chrisjluc.onesearch.ui.components.GameButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/element_margin_separation"
+                android:text="@string/menu_advanced"
+                android:id="@+id/bMenuAdvanced" />
+                -->
+
+            <com.google.android.gms.common.SignInButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/element_margin_separation"
+                android:visibility="gone"
+                android:id="@+id/bMenuSignIn" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/bottom_bar"
+        android:background="@color/blue"
+        android:id="@+id/frameLayout"></FrameLayout>
+
+</RelativeLayout>

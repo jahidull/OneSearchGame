@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="2000dp"
+    android:minHeight="2000dp"
+    tools:context="chrisjluc.onesearch.ui.gameplay.PauseDialogFragment">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llTop"
+            android:layout_centerHorizontal="true"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="@dimen/activity_vertical_margin" >
+                <chrisjluc.onesearch.ui.components.GameTextView
+                    android:text="Time"
+                    android:textSize="@dimen/wordsearchactivity_indicator_text_title_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <chrisjluc.onesearch.ui.components.GameBoldTextView
+                    android:id="@+id/tvTimePause"
+                    android:text="@string/app_name"
+                    android:gravity="center"
+                    android:textSize="@dimen/wordsearchactivity_indicator_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="@dimen/activity_vertical_margin" >
+                <chrisjluc.onesearch.ui.components.GameTextView
+                    android:text="Score"
+                    android:textSize="@dimen/wordsearchactivity_indicator_text_title_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <chrisjluc.onesearch.ui.components.GameBoldTextView
+                    android:id="@+id/tvScorePause"
+                    android:text="@string/app_name"
+                    android:gravity="center"
+                    android:textSize="@dimen/wordsearchactivity_indicator_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <chrisjluc.onesearch.ui.components.GameButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/element_margin_separation"
+            android:text="Resume"
+            android:id="@+id/bResume" />
+
+        <chrisjluc.onesearch.ui.components.GameButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/element_margin_separation"
+            android:text="Restart"
+            android:id="@+id/bRestart" />
+
+        <chrisjluc.onesearch.ui.components.GameButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/element_margin_separation"
+            android:text="Exit to Menu"
+            android:id="@+id/bQuit" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
